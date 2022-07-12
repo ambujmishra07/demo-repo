@@ -1,0 +1,11 @@
+How to find files larger than 10MB in size in /usr directory?
+# find /user -size +10M -exec ls -lah {} \;
+
+How to find files in the /home directory which were modified more than 120 days ago?
+ # find /home -mtime +120
+
+How to find files in the /var directory that have not been accessed in the last 90 days?
+# find /var -atime -90
+
+Search for core files in the entire directory tree and delete them as found without prompting for confirmation
+# find / -name core -exec rm {} \;
